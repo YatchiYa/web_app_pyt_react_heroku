@@ -1,0 +1,67 @@
+{
+    "Header": {
+
+        "title": "Coronavirus register",
+        "paragraph": "First plateforme of corona virus -COVID19- register \n which follows every patient on his states"
+
+    },
+    "About": {
+        "paragraph": "We are a young team made of new software developer who think, invest, react on every technologie on 2020's year",
+        "Why": [
+            "We follow our patient ",
+            "Daily diangostics"
+        ],
+        "Why2": [
+            "Available 24h/24h",
+            "Home diagnostic available"
+        ]
+    },
+    "Team": [{
+            "img": "img/team/spider.jpg",
+            "name": "Yatchi XEN",
+            "job": "Developer"
+        },
+        {
+            "img": "img/team/deadpool.jpg",
+            "name": "Xen DER",
+            "job": "Developer"
+        }, {
+            "img": "img/team/badg.jpg",
+            "name": "Lilou LILA",
+            "job": "Developer"
+        },
+        {
+            "img": "img/team/badgg.jpg",
+            "name": "Ken Za",
+            "job": "Developer"
+        }
+    ],
+    "Contact": {
+        "address": "Some where in paris",
+        "phone": "+0 00 00 00 00",
+        "email": "info@company.com",
+        "facebook": "fb.com",
+        "twitter": "twitter.com"
+    },
+    "Features": [{
+            "icon": "fa fa-comments-o",
+            "title": "Chat with us",
+            "text": "Our team is always available to hear you 24h/24h."
+        },
+        {
+            "icon": "fa fa-bullhorn",
+            "title": "Call Us",
+            "text": "Our team is always available, you call us, available 24h/24h"
+        },
+        {
+            "icon": "fa fa-group",
+            "title": "Team chat",
+            "text": "You can chat with our communaute to get any inofmations you want"
+        },
+        {
+            "icon": "fa fa-magic",
+            "title": "Follow your state",
+            "text": "You can follow your state every day/night and get in touch with us"
+        }
+    ]
+}

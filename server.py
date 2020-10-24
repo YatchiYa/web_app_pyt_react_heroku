@@ -4,17 +4,17 @@ from flask_cors import CORS, cross_origin
 import boto3
 import os
 
-flask_app  = Flask(__name__ 
-    ,static_folder='client/build',static_url_path='')
-cors = CORS(flask_app)
+app  = Flask(__name__ 
+    ,static_folder='vendor/build',static_url_path='')
+cors = CORS(app)
 
-@flask_app .route('/')
+@app .route('/')
 def index():
-    return flask_app.send_static_file('index.html')
+    return app.send_static_file('index.html')
 
-@flask_app .errorhandler(404)
+@app .errorhandler(404)
 def not_found(e):
-    return flask_app.send_static_file('index.html')
+    return app.send_static_file('index.html')
 
-if __name__ == "__main__":
-    flask_app.run(host='127.0.0.1', debug=False, port=os.environ.get('PORT', 80))
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
