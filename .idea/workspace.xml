@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c0781d19-1317-4477-8c58-5ef55d403eca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vendor/src/components/registe.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/src/components/App.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jc62P2mOJMmppZF0xXnuS2EM60" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0781d19-1317-4477-8c58-5ef55d403eca" name="Default Changelist" comment="" />
+      <created>1604090824752</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604090824752</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="274" y="12" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604090867347">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="274" y="12" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604090867347" />
+    <state x="604" y="103" key="FileChooserDialogImpl" timestamp="1604098573238">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="604" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604098573238" />
+  </component>
+</project>
