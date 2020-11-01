@@ -1,0 +1,104 @@
+
+[
+    {"tag": "greeting",
+    "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+    "responses": ["Hello, hope your're doing fine, how can I help you?"],
+    "context": []
+    },
+    {"tag": "goodbye",
+    "patterns": ["Bye", "See you later", "Goodbye"],
+    "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."],
+    "context": []
+    },
+    {"tag": "thanks",
+    "patterns": ["Thanks", "Thank you", "That's helpful"],
+    "responses": ["Happy to help!", "Any time!", "My pleasure"],
+    "context": []
+    },
+    {"tag": "time",
+    "patterns": ["What time is it?", "time ?", "time" ],
+    "responses": ["who cares about time, developpers never watch time :o"],
+    "context": []
+    },
+    {"tag": "developped",
+    "patterns": ["Who made you ?", "whos is your father ?", "who developped you?", "Who made you", "whos is your father",
+                "who developped you", "who developped you ?"],
+    "responses": ["i was developped by Youcef, Syphax, Lila, Kenza"],
+    "context": []
+    },
+    {"tag": "YoucefARAB",
+    "patterns": ["Who is Youcef ARAB ?", "Youcef ?", "ARAB Youcef ?", "who is youcef ?", "Who is ARAB Youcef ?"],
+    "responses": ["yatchi ? you know him ? here is his github : ------ "],
+    "context": []
+    },
+    {"tag": "Syphax",
+    "patterns": ["Who is Syphax ?", "Syphax ?", "Syphax ?", "Who is Syphax ?"],
+    "responses": ["Xen der ? you know him ? here is his github : ------ "],
+    "context": []
+    },
+    {"tag": "KenzaBESSACI",
+    "patterns": ["Who is Kenza BESSACI ?", "Kenza ?", "BESSACI Kenza ?", "Who is BESSACI Kenza ?"],
+    "responses": ["la panda ? you know her ? she always likes to sleep like a holly panda - here is her github : ------ "],
+    "context": []
+    },
+    {"tag": "LILA",
+    "patterns": ["Who is Lila ACHOUR ?", "Lila ?", "ACHOUR Lila ?", "Who is ACHOUR Lila ?"],
+    "responses": ["oh you are searching for the youngest in our groupe!! you know her ? if not take your way otherwise here is her github : ------ "],
+    "context": []
+    },
+    {"tag": "options",
+    "patterns": ["what can you do ?", "options ?", "how can you help me ?"],
+    "responses": ["i'll try to help you in order to find if you are sick or not."],
+    "context": []
+    },
+    {"tag": "sickness",
+    "patterns": [ "sick", "i'm sick", "i'm sick, what can i do ?", "i'm ill what can i do ?", "can you help me, i'm sick ?"],
+    "responses": ["okey, don't panic, just answer some question and we will try to help you and contact a doctor, do you have a fever ?"],
+    "context": ["fever"]
+    },
+    {"tag": "fever",
+    "patterns": ["yes"],
+    "responses": ["okey, did you lost your sens of smell ?"],
+    "context": ["lost_sens"]
+    },
+    {"tag": "fever",
+    "patterns": ["no"],
+    "responses": ["okey, than maybe you lost your sens of smell ?"],
+    "context": ["lost_sens_no"]
+    },
+    {"tag": "lost_sens",
+    "patterns": ["yes"],
+    "responses": ["okey, there a hight chance it's COVID19, register in this our website and we will help you to contact a doctor"],
+    "context": []
+    },
+    {"tag": "lost_sens",
+    "patterns": ["no"],
+    "responses": ["okey, than i think it's just a rhum, don't worry, take of yourself"],
+    "context": []
+    },
+    {"tag": "lost_sens_no",
+    "patterns": ["yes"],
+    "responses": ["okey, maybe it's COVID19, register on our website and we will help you to contact a doctor"],
+    "context": []
+    },
+    {"tag": "lost_sens_no",
+    "patterns": ["no"],
+    "responses": ["okey, than i think it's just a rhum, don't worry, take of yourself"],
+    "context": []
+    },
+    {"tag": "howAreYou",
+    "patterns": ["how are you ?", " good ?" ],
+    "responses": ["fine thanks and you ?"],
+    "context": ["goodtoknow"]
+    },
+    {"tag": "goodtoknow",
+    "patterns": ["yes"],
+    "responses": ["great to hear that, what can i do for you"],
+    "context": []
+    },
+    {"tag": "goodtoknow",
+    "patterns": ["no"],
+    "responses": ["ah, what can i do to help you ?"],
+    "context": []
+    }
+]

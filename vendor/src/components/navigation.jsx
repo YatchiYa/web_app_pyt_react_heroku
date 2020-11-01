@@ -49,9 +49,9 @@ export class Navigation extends Component {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="page-scroll">
+                <a href="/register">
                   Authentification
-                </a>
+                  </a>
               </li>
             </ul>
           </div>

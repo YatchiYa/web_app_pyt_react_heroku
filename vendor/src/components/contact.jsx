@@ -54,7 +54,10 @@ export class Contact extends Component {
                     <p className="help-block text-danger"></p>
                   </div>
                   <div id="success"></div>
-                  <button type="submit" className="btn btn-custom btn-lg">
+                  <button type="submit" className="btn btn-custom btn-lg" onclick={(e) =>{
+                    e.preventDefault()
+                    alert("your message has been sent !")
+                  }}>
                     Send Message
                   </button>
                 </form>
@@ -92,16 +95,10 @@ export class Contact extends Component {
                 <div className="social">
                   <ul>
                     <li>
-                      <a
-                        href={this.props.data ? this.props.data.facebook : "/"}
-                      >
                         <i className="fa fa-facebook"></i>
-                      </a>
                     </li>
                     <li>
-                      <a href={this.props.data ? this.props.data.twitter : "/"}>
                         <i className="fa fa-twitter"></i>
-                      </a>
                     </li>
                   </ul>
                 </div>
