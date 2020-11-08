@@ -14,35 +14,41 @@ export class Auth extends Component {
             this.state = {
                 email : '',
                 password : '',
-            }
-            this.data= {
-              redirect : false
+                redirect : false,
+                data_user: {}
             }
           }
 
+    componentDidMount(){
+      this.setState({
+        redirect: false
+      })
+    }
 
-    async login() {
+    login() {
         var myParams = {
             data: this.state
         }
-        await axios.post('/api/login', myParams)
-            .then(function(response){
-                console.log(response.data.status)
+        axios.post('/api/login', myParams)
+            .then(res => {
                 this.setState({
-                  redirect: true
+                  redirect: true,
+                  data_user : res.data
                 })
             })
-            .catch(function(error){
-                alert ("error user not exist or password error ")
-                console.log(error)
+            .catch(err => {
+                console.log(err)
             })
 
     }
 
   render() {
-    if (this.props.data.redirect) {
+    if (this.state.redirect === true) {
       return <Redirect to={{
-                pathname: "/"
+                pathname: "/home",
+                state : {
+                  data : this.state.data_user
+                }
               }}
       />      
     }

@@ -28,22 +28,22 @@
     },
     {"tag": "YoucefARAB",
     "patterns": ["Who is Youcef ARAB ?", "Youcef ?", "ARAB Youcef ?", "who is youcef ?", "Who is ARAB Youcef ?"],
-    "responses": ["yatchi ? you know him ? here is his github : ------ "],
+    "responses": ["yatchi ? you know him ? here is his github : https://github.com/YatchiYa "],
     "context": []
     },
     {"tag": "Syphax",
     "patterns": ["Who is Syphax ?", "Syphax ?", "Syphax ?", "Who is Syphax ?"],
-    "responses": ["Xen der ? you know him ? here is his github : ------ "],
+    "responses": ["Xen der ? you know him ? here is his github : https://github.com/syphaxAouadene "],
     "context": []
     },
     {"tag": "KenzaBESSACI",
     "patterns": ["Who is Kenza BESSACI ?", "Kenza ?", "BESSACI Kenza ?", "Who is BESSACI Kenza ?"],
-    "responses": ["la panda ? you know her ? she always likes to sleep like a holly panda - here is her github : ------ "],
+    "responses": ["you know her ? she is a software developper - here is her github : https://github.com/kenza-95 "],
     "context": []
     },
     {"tag": "LILA",
     "patterns": ["Who is Lila ACHOUR ?", "Lila ?", "ACHOUR Lila ?", "Who is ACHOUR Lila ?"],
-    "responses": ["oh you are searching for the youngest in our groupe!! you know her ? if not take your way otherwise here is her github : ------ "],
+    "responses": ["oh you are searching for the youngest in our groupe!! you know her ? if not take your way otherwise here is her github : https://github.com/lilaACHOUR"],
     "context": []
     },
     {"tag": "options",
@@ -52,7 +52,7 @@
     "context": []
     },
     {"tag": "sickness",
-    "patterns": [ "sick", "i'm sick", "i'm sick, what can i do ?", "i'm ill what can i do ?", "can you help me, i'm sick ?"],
+    "patterns": ["i think i got COVID" , "i think i have COVID", "sick", "i'm sick", "i'm sick, what can i do ?", "i'm ill what can i do ?", "can you help me, i'm sick ?"],
     "responses": ["okey, don't panic, just answer some question and we will try to help you and contact a doctor, do you have a fever ?"],
     "context": ["fever"]
     },
@@ -83,7 +83,7 @@
     },
     {"tag": "lost_sens_no",
     "patterns": ["no"],
-    "responses": ["okey, than i think it's just a rhum, don't worry, take of yourself"],
+    "responses": ["okey, than i think it's just a rhum, don't worry, take care of yourself"],
     "context": []
     },
     {"tag": "howAreYou",

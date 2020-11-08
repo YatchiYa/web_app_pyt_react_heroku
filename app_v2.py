@@ -4,17 +4,13 @@ from flask import Flask, render_template
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import folium
 import json
 import requests
-import folium
 from folium.plugins import HeatMap
 
-app = Flask(__name__)
 
-@app.route('/')
-def index():
-    df = pd.read_csv("C:\\Users\\Utilisateur\\OneDrive\\Bureau\\Berouachedi_project\\creation_de_carte_usa\\global_cases.csv", sep=";")
+def map_world():
+    df = pd.read_csv("./global_cases.csv", sep=";")
     df['country'] = df['country'].replace(['US'],'United States of America').\
     replace('Taiwan*', 'Taiwan').replace('Korea, South','South Korea').\
     replace('Tanzania','United Republic of Tanzania').\
@@ -68,14 +64,10 @@ def index():
     # HeatMap(data=df_copy[['pickup_latitude', 'pickup_longitude', 'count']].groupby(['pickup_latitude', 'pickup_longitude']).sum().reset_index().values.tolist(), radius=8, max_zoom=13).add_to(base_map)
 
     folium.LayerControl().add_to(m)
-    m.save('templates/map_v2.html')
-    return render_template('index.html')
+    m.save('vendor/public/map_v2.html')
+    return ({"status":"success", "carte": carte, "m":m})
 
 
 
-@app.route('/map_v2')
-def map():
+def map_world_seconde():
     return render_template('map_v2.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
