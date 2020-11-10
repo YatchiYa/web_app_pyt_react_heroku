@@ -1,0 +1,245 @@
+
+
+@keyframes anim_show {
+    0%{ opacity: 0; margin-top: 15%;}
+    100% {opacity: 1; margin-top: 0%;}
+  }
+
+.builder_homepage{
+    position: relative;
+    height: 100%;
+
+    .col_aside{
+        position: relative;
+        background: black;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    .nom_holder{
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid white;
+        margin: 12px 0;
+        padding-bottom: 10px;
+
+        h4{
+            color : white;
+
+            .icoon{    
+                float: left;
+                font-size: 86px;
+            }
+            label{
+                font-size: 22px;
+                padding: 36px 15px;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .infos{
+        position: relative;
+        transition: .5s ease-in-out;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 44px;
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            color: #1e72f0;
+            transform: scale(1.1);
+            font-weight: bold;
+        }
+        
+    }
+    .infosx{
+        position: relative;
+        transition: .5s ease-in-out;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 44px;
+        margin-bottom: 36px;
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            color: #1e72f0;
+            transform: scale(1.1);
+            font-weight: bold;
+        }
+        
+    }
+
+    #seconddiv.coolclass{
+        max-height:100%;
+       }
+       
+       #seconddiv {
+        max-height: 0%;
+        transition: 0.8s;
+        overflow: hidden;
+       }
+
+       #seconddivx.coolclassx{
+        max-height:100%;
+       }
+       
+       #seconddivx {
+        max-height: 0%;
+        transition: 0.8s;
+        overflow: hidden;
+       }
+
+    .dom_holder{
+        color: white;
+        text-align: center;
+        border-bottom: 4px solid #fff;
+        margin: 12px 48px;
+        padding-bottom: 10px;
+
+
+        h5{
+            color : white;
+            text-align: initial;
+
+            span{
+                color: white;
+                font-size: smaller;
+                text-align: initial;
+            }
+        }
+    }
+
+
+    .footer_holder{
+        color: white;
+        text-align: center;
+        margin: 12px 0;
+
+        h5{
+            color : white;
+            font-size: smaller;
+        }
+    }
+
+    .sym_holder{
+        color: white;
+        text-align: center;
+        margin: 12px 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid white;
+
+    }
+    
+    .logout_holder{
+        color: white;
+        text-align: center;
+        margin: 12px 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid white;
+
+    }
+}
+
+.choice {
+    position: relative;
+    color: #fbfbfb;
+    text-align: end;
+    padding: 4px 25px;
+}
+
+.map_holder{
+    position: relative;
+    padding: 5px 6%;
+    text-align: center;
+
+    .map_holder{
+        position: relative;
+        text-align: center;
+    }
+    .bodydd{
+        position: relative;
+    }
+
+    h2{
+        position: relative;
+        color: #101067;
+        font-size: 13px;
+    }
+}
+
+.bodydd{
+    width: 100%;
+    height: 65px;
+    background: black;
+    padding: 0;
+    margin: 0;
+
+    h3{
+        color: white;
+        text-align: center;
+        font-size: 33px;
+    }
+}
+.builder-second{
+    position: relative;
+    background: url("../ccvr.jpg") no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    
+    .title{
+        position: absolute;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        margin-top: 8%;
+        text-transform: inherit;
+    }
+
+    .buiii{
+        padding-top: 20%;
+        transition: all .3s ease-in-out;
+            
+        .bbb{
+            color: white;
+            padding: 0% 16%;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 1s ease-in-out;
+
+
+                .name_builder, .firstname_builder{
+                    position: relative;
+                    background: rgba(0,0,0,0.8);
+                    transition: all .3s ease-in-out;
+                    color: white;
+                    border-radius: 15px;
+                    padding: 2% 5%;
+                    animation: anim_show 1s ease-in-out;
+        
+                    .label_builder{
+                        position: relative;
+                        font-size: 17px;
+                    }
+        
+                    .btn-next{
+                        position: relative;
+                    }
+
+                    input[type="checkbox"] {
+                        margin: 4px 0 0;
+                        margin-top: 1px \9;
+                        line-height: normal;
+                        width: 3%;
+                        height: 3%;
+                    }
+                }
+        }
+    }
+
+}
