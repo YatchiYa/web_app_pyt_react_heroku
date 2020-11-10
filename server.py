@@ -3,6 +3,7 @@ from flask import Flask, render_template,send_from_directory,request, jsonify, m
 from flask_cors import CORS, cross_origin
 import os
 import requests
+import json
 import http.client
 
 import chatbot.constants as constants
@@ -103,53 +104,53 @@ def login():
 @app.route('/map_world', methods=['GET','POST'])
 def map_ws():
     print("called map v2")
-    return (map_world())
+    map_world()
+    return ({"status": "success"})
 
 
 
 @app.route('/daystats', methods=['GET','POST'])
 def daystats():
-    url = "https://covid-19-statistics.p.rapidapi.com/reports/total"
+    
+    urll = 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+    response = requests.request("GET", urll)
 
-    querystring = {"date":"2020-04-07"}
+    geo_json_data = json.loads(response.text)
+    day_data = geo_json_data["OWID_WRL"]["data"][len(geo_json_data["OWID_WRL"]["data"]) - 1]
 
-    headers = {
-        'x-rapidapi-key': "135a9d9dcfmshcf830c0b0b26350p193d1ejsn040cb20e2692",
-        'x-rapidapi-host': "covid-19-statistics.p.rapidapi.com"
-        }
-
-    response = requests.request("GET", url, headers=headers, params=querystring)
-
-    x = response.text.split("\n")
-    date = x[2]
-    lastupdate = x[3]
-    confirmed = x[4]
-    death = x[6]
-    recoverd = x[8]
-    fatalite_rate = x[12]
     data = {
-        "date": date.split(":")[1].split(",")[0],
-        "lastupdate" : lastupdate.split(":")[1].split(",")[0],
-        "confirmed" : confirmed.split(":")[1].split(",")[0],
-        "deaths" : death.split(":")[1].split(",")[0],
-        "recovered" : recoverd.split(":")[1].split(",")[0],
-        "fatalite" : fatalite_rate.split(":")[1].split(",")[0]
+        "date": day_data["date"],
+        "lastupdate" : day_data["date"],
+        "confirmed" : day_data["total_cases"],
+        "newconfirmed" : day_data["new_cases"],
+        "deaths" : day_data["total_deaths"],
+        "newdeaths" : day_data["new_deaths"]
     }
 
     #   print(confirmed.split(":")[1].split(",")[0])
-    labels = 'Deaths', 'Reported', 'Recovered'
-    sizes = [death.split(":")[1].split(",")[0], confirmed.split(":")[1].split(",")[0], recoverd.split(":")[1].split(",")[0]]
-    explode = (0, 0.1, 0.1)
+    labels = 'Confirmed', 'Deaths'
+    sizes = [data["confirmed"], data["deaths"]]
+    explode = (0, 0.1)
 
     fig1, ax1 = plt.subplots()
     ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
             shadow=True, startangle=90)
     ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-    fig1.savefig("piechart.png")
+    fig1.savefig("vendor/src/piechart.png")
 
+    labelsx = 'NewConfirmed', 'NewDeaths'
+    sizesx = [data["newconfirmed"], data["newdeaths"]]
+    explodex = (0, 0.1)
+
+    fig1x, ax1x = plt.subplots()
+    ax1x.pie(sizesx, explode=explodex, labels=labelsx, autopct='%1.1f%%',
+            shadow=True, startangle=90)
+    ax1x.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    fig1x.savefig("vendor/src/pie.png")
+
+    
 
     return ({"data": data})
-
 
 
 if __name__ == '__main__':

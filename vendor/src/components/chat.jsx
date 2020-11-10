@@ -20,6 +20,7 @@ export class chat extends Component {
       
     componentDidMount() {
         addResponseMessage("Welcome, i'm Yatchi, and i'll do my best to help you");
+        addResponseMessage("this Beta version can understand only english :) ");
     }
     
     async handleNewUserMessage(newMessage) {
@@ -42,7 +43,7 @@ export class chat extends Component {
                 <Widget
                     handleNewUserMessage={this.handleNewUserMessage}
                     profileAvatar={logo}
-                    title="Kenza & Lila"
+                    title="Covid Simulation"
                     subtitle={NamedNodeMap}
                     {...this.props}
                 />

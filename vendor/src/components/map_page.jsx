@@ -35,17 +35,8 @@ class FullPageIntroWithNonFixedNavbar extends React.Component {
 
   async componentDidMount(){
         
-    await fetch('/map_world')
-    .then(res => {
-        console.log("ok")
-    })
-    .catch(err => {
-        console.log("err")
-        console.log(err)
-    })
-
     
-    await axios.get('/daystats')
+    axios.get('/daystats')
     .then(res => {
       console.log("dede")
       console.log(res)
@@ -56,6 +47,29 @@ class FullPageIntroWithNonFixedNavbar extends React.Component {
     .catch(err => {
         console.log(err)
     })
+
+    
+    fetch('/daystats')
+    .then(res => {
+      console.log("dede")
+      console.log(res)
+      this.setState({
+        data : res.data.data
+      })
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+    fetch('/map_world')
+    .then(res => {
+        console.log("ok")
+    })
+    .catch(err => {
+        console.log("err")
+        console.log(err)
+    })
+
 }
 
   render() {
@@ -120,41 +134,51 @@ class FullPageIntroWithNonFixedNavbar extends React.Component {
             
             {this.state.mode == 2 && 
             <>
+                    <div className="dddmap">
+                      <h4>Covid stats : </h4>
+                    </div>
+                    <div className="dddmap">
+                      <h4>date : {this.state.data.date}</h4>
+                    </div>
+                    <MDBRow>
+                      <MDBCol md="3">
+                        <h4 className="dedsss">Global stats Covid</h4>
+                        <MDBRow className="wwdd">
+                          <div className="ddffdd">
+                            <strong>Deaths </strong> <br /> {this.state.data.deaths}
+                          </div>
 
+                        </MDBRow>
+                        <MDBRow className="wwdd">
+                          <div className="ddffddxx">
+                            <strong>Confirmed </strong> <br /> {this.state.data.confirmed}
+                          </div>
 
-                <div className="dddmap">
-                  <h4>Covid stats : </h4>
-                </div>
-                <div className="dddmap">
-                  <h4>date : {this.state.data.date}</h4>
-                  <h4>Last update : {this.state.data.lastupdate}</h4>
-                </div>
-                <MDBRow>
-                  <MDBCol md="3">
-                    <MDBRow className="wwdd">
-                      <div className="ddffdd">
-                        <strong>Deaths </strong> <br /> {this.state.data.deaths}
-                      </div>
+                        </MDBRow>
 
+                      </MDBCol>
+                      <MDBCol md="6" style={{display:"flex"}}>
+                        <img src={require('../piechart.png')} />
+                        <img src={require('../pie.png')} />
+                      </MDBCol>
+                      <MDBCol md="3">
+                        <h4 className="dedsss">Today stats Covid</h4>
+                        <MDBRow className="wwdd">
+                          <div className="ddffdd">
+                            <strong>Deaths </strong> <br /> {this.state.data.newdeaths}
+                          </div>
+
+                        </MDBRow>
+                        <MDBRow className="wwdd">
+                          <div className="ddffddxx">
+                            <strong>Confirmed </strong> <br /> {this.state.data.newconfirmed}
+                          </div>
+
+                        </MDBRow>
+
+                      </MDBCol>
                     </MDBRow>
-                    <MDBRow className="wwdd">
-                      <div className="ddffddx">
-                        <strong>Recovered </strong> <br /> {this.state.data.recovered}
-                      </div>
-
-                    </MDBRow>
-                    <MDBRow className="wwdd">
-                      <div className="ddffddxx">
-                        <strong>Confirmed </strong> <br /> {this.state.data.confirmed}
-                      </div>
-
-                    </MDBRow>
-
-                  </MDBCol>
-                  <MDBCol md="6">
-                    <img src={require('../piechart.png')} />
-                  </MDBCol>
-                </MDBRow>
+                
             </>
             
             }

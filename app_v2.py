@@ -10,7 +10,7 @@ from folium.plugins import HeatMap
 
 
 def map_world():
-    df = pd.read_csv("./global_cases.csv", sep=";")
+    df = pd.read_csv("global_cases.csv", sep=";")
     df['country'] = df['country'].replace(['US'],'United States of America').\
     replace('Taiwan*', 'Taiwan').replace('Korea, South','South Korea').\
     replace('Tanzania','United Republic of Tanzania').\
@@ -38,7 +38,7 @@ def map_world():
         tiles='https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png',
         attr="©OpenStreetMap, ©CartoDB") # ('')
 
-    carte = m.choropleth(
+    m.choropleth(
         geo_data=geo_json_data,
         name='choropleth',
         data=df[df['date']=="2020-03-30"],
@@ -65,7 +65,7 @@ def map_world():
 
     folium.LayerControl().add_to(m)
     m.save('vendor/public/map_v2.html')
-    return ({"status":"success", "carte": carte, "m":m})
+    return ({"status":"success"})
 
 
 
