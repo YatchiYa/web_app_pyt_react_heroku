@@ -1,0 +1,23 @@
+Bonjour,
+
+j'ai ajouté trois fichiers nommés : app_v2.py, index.html, global_cases.csv
+
+app_v2.py ==> c le fichier qui contient le code flask et python
+index.html ==> c le fichier qui doit étre mis dans un dossier 'templates' (donc n'oublie pas de créer 
+un dossier 'templates' et mettre a l'interrieur le fihcier 'index.html')
+global_cases.csv ==> c le fichier csv ['date', 'country', 'cases'] il contient des données covid de chaque pays
+et dans chaque date en allant de janvier 2020 jusqua hier
+
+
+voila donc l'arborescence de tes fichiers :
+
+|_app_v2.py
+|
+|_global_cases.csv
+|
+|_templates
+	   |_index.html	
+
+et quand tu exécute la commande : python app_v2.py
+il te demandera surement d'installer folium, pandas, ...etc
+donc assure toi d'installer tout les modules python utilisés
