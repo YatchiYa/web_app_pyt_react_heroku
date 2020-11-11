@@ -27,4 +27,4 @@ DevOps :  heroku (deploiement en ligne)
 12- algorithme folium de creation de carte ( folium & matplotlib)
 
 
-----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------test
