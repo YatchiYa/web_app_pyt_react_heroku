@@ -33,6 +33,7 @@ class FullPageIntroWithNonFixedNavbar extends React.Component {
     });
   }
 
+
   async componentDidMount(){
         
     
@@ -49,6 +50,17 @@ class FullPageIntroWithNonFixedNavbar extends React.Component {
     })
 
     
+    fetch('/daystats')
+    .then(res => {
+      console.log("dede")
+      console.log(res)
+      this.setState({
+        data : res.data.data
+      })
+    })
+    .catch(err => {
+        console.log(err)
+    })
 
     fetch('/map_world')
     .then(res => {

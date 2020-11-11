@@ -31,13 +31,22 @@ export class Auth extends Component {
         }
         axios.post('/api/login', myParams)
             .then(res => {
+              console.log("test")
+              console.log(res.data)
+              console.log(res.data.user)
+              if (res.data){
                 this.setState({
                   redirect: true,
                   data_user : res.data
                 })
+              }
+              else{
+                alert("error : connection")
+              }
             })
             .catch(err => {
                 console.log(err)
+                alert("error : connection")
             })
 
     }

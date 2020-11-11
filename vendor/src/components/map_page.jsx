@@ -14,6 +14,12 @@ function iframe() {
 }
 
 
+function iframex() {
+  return {
+      __html: '<iframe src="./map_v3.html" width="1000" height="500"></iframe>'
+  }
+}
+
 
 class FullPageIntroWithNonFixedNavbar extends React.Component {
   constructor(props) {
@@ -99,7 +105,7 @@ class FullPageIntroWithNonFixedNavbar extends React.Component {
 
 
           <MDBRow className="rowooo">
-            <MDBCol md="5">
+            <MDBCol md="3">
               <MDBBtn outline color="secondary" onClick={(e) => {
                 e.preventDefault()
                 this.setState({
@@ -107,17 +113,40 @@ class FullPageIntroWithNonFixedNavbar extends React.Component {
                 })
               }}>Map</MDBBtn>
             </MDBCol>
-            <MDBCol md="5">
+            <MDBCol md="3">
               <MDBBtn outline color="primary" onClick={(e) => {
                 e.preventDefault()
                 this.setState({
                   mode : 2
+                })
+              }}>Map2</MDBBtn>
+            </MDBCol>
+            <MDBCol md="5">
+              <MDBBtn outline color="primary" onClick={(e) => {
+                e.preventDefault()
+                this.setState({
+                  mode : 3
                 })
               }}>Stats</MDBBtn>
             </MDBCol>
           </MDBRow>
             
             {this.state.mode == 1 && 
+            <>
+
+                <div className="dddmap">
+
+                <div dangerouslySetInnerHTML={iframex()} />
+                </div>
+
+                <div className="dddmap">
+                  <h4>this is a map that represent Covid contamination in the world</h4>
+                </div>
+            </>
+            
+            }
+            
+            {this.state.mode == 3 && 
             <>
 
                 <div className="dddmap">
@@ -157,7 +186,7 @@ class FullPageIntroWithNonFixedNavbar extends React.Component {
                         </MDBRow>
 
                       </MDBCol>
-                      <MDBCol md="6" style={{display:"flex"}}>
+                      <MDBCol md="6">
                         <img src={require('../piechart.png')} />
                         <img src={require('../pie.png')} />
                       </MDBCol>
